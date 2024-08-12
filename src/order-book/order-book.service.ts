@@ -23,3 +23,5 @@ export class OrderBookService {
     }
   }
 }
+
+// this service fetches the data from the candlestick chart, and returns the response

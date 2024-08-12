@@ -6,6 +6,6 @@ import { CommentGateway } from './comment.gateway';
 @Module({
   controllers: [CommentController],
   providers: [CommentService, CommentGateway],
-  exports: [CommentService], // Export CommentService
+  exports: [CommentService],
 })
 export class CommentModule {}

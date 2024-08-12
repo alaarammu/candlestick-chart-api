@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { Comment } from './entities/comment.entity';
 
-// Define the DTO used for creating comments
 export class CreateCommentDto {
   text: string;
 }
 
 @Injectable()
 export class CommentService {
-  private comments: Comment[] = []; // In-memory store for comments
-  private nextId = 1; // Simple ID counter
+  private comments: Comment[] = []; // store for comments
+  private nextId = 1; // counts the IDs
 
   async create(createCommentDto: CreateCommentDto): Promise<Comment> {
     const comment: Comment = {

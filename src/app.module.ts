@@ -13,3 +13,5 @@ import { CommentGateway } from './comment/comment.gateway';
   providers: [OrderBookGateway, CommentGateway],
 })
 export class AppModule {}
+
+// app.module importing all other resouces, modules, files, and gateway to connect to client side

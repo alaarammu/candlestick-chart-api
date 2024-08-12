@@ -21,7 +21,7 @@ export class OrderBookGateway implements OnGatewayInit, OnGatewayConnection, OnG
     this.intervalId = setInterval(async () => {
       const orderBookData = await this.orderBookService.fetchOrderBookData();
       this.server.emit('orderBookUpdate', orderBookData);
-    }, 5000); // Adjust the interval as needed
+    }, 5000); 
   }
 
   handleConnection(client: Socket) {
@@ -39,6 +39,6 @@ export class OrderBookGateway implements OnGatewayInit, OnGatewayConnection, OnG
   }
 
   ngOnDestroy() {
-    clearInterval(this.intervalId); // Clear interval when gateway is destroyed
+    clearInterval(this.intervalId);
   }
 }
